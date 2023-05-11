@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="SWTestAcademy">
+
+    <listeners>
+        <listener class-name="tests.functional.HappyPath"/>
+        <listener class-name = "tests.negative.LogInNegative"/>
+    </listeners>
+
+    <test name="HappyPath" parallel="classes" thread-count="1">
+        <classes>
+            <class name="tests.functional.HappyPath"/>
+        </classes>
+    </test>
+    <test name="Negative" parallel="classes" thread-count="1">
+        <classes>
+            <class name="tests.negative.LogInNegative"/>
+        </classes>
+    </test>
+</suite>
